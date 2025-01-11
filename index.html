@@ -1,13 +1,812 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>中華料理散策 官方網站</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/png" href="./images/favion.ico" sizes="96x96" />
+
+
+    <!-- ====== Card Slider JS ====== -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- ========Card Slider FONTS ======== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- ========表單彈出視窗 ======== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+</head>
+
+<body>
+    <header id="topbar">
+
+        <h1 class="logo">
+            <a href="./index.html"><img src="./images/logo.svg" alt=""></a>
+            <p>中華料理散策 </p><span class="line"></span>
+
+
+            <div class="marquee">
+                <div>
+                    <ul>
+                        <li><img src="./images/bowl-food-solid.svg" alt="">台北中山店開幕 人才募集中</li>
+                        <li><img src="./images/bowl-food-solid.svg" alt="">台北中山店開幕 人才募集中</li>
+                        <li><img src="./images/bowl-food-solid.svg" alt="">台北中山店開幕 人才募集中</li>
+                        <li><img src="./images/bowl-food-solid.svg" alt="">台北中山店開幕 人才募集中</li>
+                        <li><img src="./images/bowl-food-solid.svg" alt="">台北中山店開幕 人才募集中</li>
+                        <li><img src="./images/bowl-food-solid.svg" alt="">台北中山店開幕 人才募集中</li>
+                        <li><img src="./images/bowl-food-solid.svg" alt="">台北中山店開幕 人才募集中</li>
+                    </ul>
+                </div>
+            </div>
+        </h1>
+
+        <div class="navigation">
+            <div class="menu">
+                <ul>
+                    <li><a href="./restaurent.html">找據點</a></li>
+                    <li><a href="./about.html">關於散策</a></li>
+                    <li><a href="./menu.html">菜單</a></li>
+                </ul>
+            </div>
+            <div class="icon">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./images/icon-ig.svg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/icon-fb.svg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- 內容區 -->
+    <main>
+
+
+        <!-- 封面 -->
+        <section id="cover">
+
+            <figure class="planet"><img src="./images/cover-planet.png" alt=""></figure>
+            <figure class="foods"><img src="./images/cover-foods.png" alt=""></figure>
+
+            <div class="animation">
+                <figure class="brand1"><img src="./images/cover-ramanya.png" alt=""></figure>
+                <figure class="brand2"><img src="./images/cover-oishi.png" alt=""></figure>
+                <figure class="brand3"><img src="./images/cover-spicy.png" alt=""></figure>
+            </div>
+
+            <div class="smoke"></div>
+            <div class="smoke2"></div>
+
+            <figure class="title-img"><img src="./images/title-img.svg" alt=""></figure>
+
+
+
+
+
+            <!-- 區域選單 -->
+
+            <div class="bookimg-box">
+                <form action="/action_page.php">
+                    <div class="booking-top">
+
+
+
+                        <div class="item-booking">
+
+                            <label>預約日期 (date)</label>
+
+                            <div class="select">
+                                <input type="date" id="startDate" name="startDate" placeholder="Start date"
+                                    min="2023-02-01">
+                            </div>
+
+                            <label>分店 (branch)</label>
+
+                            <select id="timeRange" name="timeRange">
+                                <option>選擇分店</option>
+                                <optgroup label="北部">
+                                    <option>信義101</option>
+                                    <option>中山</option>
+                                    <option>林森北</option>
+                                </optgroup>
+                                <optgroup label="中部">
+                                    <option>台灣大道</option>
+                                    <option>lalaport</option>
+                                    <option>三井</option>
+                                </optgroup>
+                                <optgroup label="南部">
+                                    <option>漢神巨蛋</option>
+                                </optgroup>
+                            </select>
+
+
+
+                        </div>
+
+
+
+
+
+                        <div class="item-booking">
+                            <label>預約時間 (time)</label>
+
+                            <div class="select">
+                                <input type="time" id="starttime" name="starttime" placeholder="Start time">
+
+                            </div>
+
+
+
+                            <label>人數 (people)</label>
+
+                            <div class="select">
+
+                                <select id="timeRange" name="timeRange">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                    <option value="3">6</option>
+                                    <option value="3">7</option>
+                                    <option value="3">8人以上</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="booking-bottom">
+
+                        <div class="text-booking">
+                            <label for="name">訂位姓名</label>
+                            <input class="text" type="text" name="name" placeholder="請輸入姓名">
+
+                            <label for="tel">訂位電話</label>
+                            <input class="text" type="text" name="tel" placeholder="請輸入電話"> <br>
+                        </div>
+
+                        <button type="submit" value="Submit" class="button1">點我訂位</button>
+
+                    </div>
+
+
+                </form>
+            </div>
+        </section>
+
+
+
+        <!-- 新年慶 -->
+        <section id="NEW">
+            <header id="title">
+                <h2>新年慶</h2>
+            </header>
+
+            <figure class="banner-new"><img src="./images/new-banner .png" alt=""></figure>
+
+            <figure class="ron1">
+                <img src="./images/new-ron.png" alt="">
+            </figure>
+            <figure class="ron2">
+                <img src="./images/new-ron.png" alt="">
+            </figure>
+
+            <figure class="pinkbb">
+                <img src="./images/new-pinkbb.png" alt="">
+            </figure>
+
+            <div class="new-content">
+
+                <div class="slogan-left">
+
+                    <h3>鮮嫩多汁</h3>
+                    <h2>元寶煎餃</h2>
+                    <figure class="dum"><img src="./images/new-dum.png" alt=""></figure>
+                </div>
+                <div class="slogan-date">
+                    <h2>1/30</h2>
+                </div>
+
+
+
+                <div class="slogan-center">
+                    <h2>台灣</h2>
+                    <h3>初上陸</h3>
+                </div>
+
+                <div class="slogan-right">
+                    <figure class="dum"><img src="./images/new-peach.png" alt=""></figure>
+
+                    <div class="slogan-rightright">
+                        <h2>日本岡山蜜桃酒</h2>
+                        <h3>凡消費滿五百元即贈一瓶</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div>
+        </section>
+
+
+        <!-- 招牌料理介紹 -->
+        <section id="DISHES">
+
+            <div class="slider">
+                <div class="title-slider">
+                    <h2>饕客最愛
+                        招牌料理</h2>
+                    <p>看看這些饕客讚譽有加的招牌料理！</p>
+                </div>
+                <div class="images">
+                    <div class="item" style="--i: 1;">
+                        <img src="./images/circle-coldramen.png">
+                    </div>
+                    <div class="item" style="--i: 2;">
+                        <img src="./images/circle-don.png">
+                    </div>
+                    <div class="item" style="--i: 3;">
+                        <img src="./images/circle-niku.png">
+                    </div>
+                    <div class="item" style="--i: 4;">
+                        <img src="./images/circle-syouronnbou.png">
+                    </div>
+                    <div class="item" style="--i: 5;">
+                        <img src="./images/circle-raman.png">
+                    </div>
+                    <div class="item" style="--i: 6;">
+                        <img src="./images/circle-mapo.png">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="item active">
+                        <h1>極辛麻婆豆腐</h1>
+                        <div class="des">
+                            堅持使用手工現磨的四川花椒，顆粒飽滿，香氣濃郁，每一口都吃得到最純粹的麻香。
+                        </div>
+                        <!-- <button>See more</button> -->
+                    </div>
+                    <div class="item">
+                        <h1>濃厚豚骨拉麵</h1>
+                        <div class="des">
+                            醇厚香濃！ 嚴選北海道豚骨長時間熬製，湯頭濃郁香醇，搭配Q彈麵條，每一口都是幸福的滋味。
+                        </div>
+                        <!-- <button>See more</button> -->
+                    </div>
+                    <div class="item">
+                        <h1>特選小籠包</h1>
+                        <div class="des">
+                            嚴選上等豬肉，肉質鮮嫩多汁，搭配獨家調製的湯汁，每一口都是純粹的美味。
+                        </div>
+                        <!-- <button>See more</button> -->
+                    </div>
+                    <div class="item">
+                        <h1>糖醋排骨</h1>
+                        <div class="des">
+                            採用傳統工法，將豬排炸至外酥內嫩，搭配百年老醋釀製的糖醋醬汁，酸甜香脆的口感，風味絕佳。
+                        </div>
+                        <!-- <button>See more</button> -->
+                    </div>
+                    <div class="item">
+                        <h1>炭火燒肉飯</h1>
+                        <div class="des">
+                            嚴選優質豬五花，炭火炙烤出誘人的焦香，搭配軟嫩米飯，再佐以特製醬料，打造出令人食指大動的燒肉飯，滿足您挑剔的味蕾。
+                        </div>
+                        <!-- <button>See more</button> -->
+                    </div>
+                    <div class="item">
+                        <h1>中華冷麵</h1>
+                        <div class="des">
+                            源自日本的料理，將日本拉麵煮熟後快速降溫，搭配酸甜的醬汁及各式清爽的配料，如火腿、黃瓜、番茄等，口感豐富，暑氣全消！
+                        </div>
+                        <!-- <button>See more</button> -->
+                    </div>
+                </div>
+                <button id="prev">
+                    < </button>
+                        <button id="next"> > </button>
+            </div>
+
+
+        </section>
+
+        <!-- 人氣評論 -->
+
+
+        <section id="POP">
+
+            <header id="title">
+                <h2>人氣評論</h2>
+            </header>
+            <figure class="banner-pop"><img src="./images/banner.png" alt=""></figure>
+
+            <div class="big-card-pop">
+                <div class="big-card">
+                    <div class="card-content">
+
+                        <div class="name-profession">
+                            <img src="./images/avatar01.png" alt="">
+                            <span class="name">王小明</span>
+                        </div>
+
+
+                        <div class="profession">
+                            <img src="./images/pop01.png" alt="">
+                            <p>這家日式中華料理店讓我驚艷不已！招牌麻婆豆腐口感綿密，辣度適中，豆豉香氣濃郁，搭配白飯更是絕配。春捲外皮酥脆，內餡飽滿，蘸上特製醬料別有一番風味。餐後享用的杏仁豆腐滑嫩細緻，甜而不膩，為這頓飯畫下完美句點。餐廳的裝潢帶有濃濃的日式風情，服務人員親切有禮，整體用餐體驗非常愉快。如果你想品嚐結合中日風味的中華料理，這家店絕對值得一試！
+                            </p>
+                        </div>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="card-pop">
+
+                <div class="swiper mySwiper container">
+
+                    <div class="swiper-wrapper swiper-content">
+
+                        <!----------------- 第一張 ----------------->
+                        <div class="swiper-slide card">
+
+
+                            <div class="card-content">
+
+                                <div class="name-profession">
+                                    <img src="./images/avatar01.png" alt="">
+                                    <span class="name">王小明</span>
+                                </div>
+
+                                <div class="profession">
+                                    <p>煎餃完全是我的菜，外酥內嫩，太好吃了！每次來這家店必點煎餃，外皮煎得金黃酥脆，太香了！</p>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!----------------- 第二張 ----------------->
+                        <div class="swiper-slide card">
+
+
+                            <div class="card-content">
+
+                                <div class="name-profession">
+                                    <img src="./images/avatar02.png" alt="">
+                                    <span class="name">王小明</span>
+                                </div>
+
+                                <div class="profession">
+                                    <p>煎餃完全是我的菜，外酥內嫩，太好吃了！每次來這家店必點煎餃，外皮煎得金黃酥脆，太香了！</p>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!----------------- 第三張 ----------------->
+                        <div class="swiper-slide card">
+
+
+                            <div class="card-content">
+
+                                <div class="name-profession">
+                                    <img src="./images/avatar03.png" alt="">
+                                    <span class="name">王小明</span>
+                                </div>
+
+                                <div class="profession">
+                                    <p>煎餃完全是我的菜，外酥內嫩，太好吃了！每次來這家店必點煎餃，外皮煎得金黃酥脆，太香了！</p>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!----------------- 第四張 ----------------->
+                        <div class="swiper-slide card">
+
+
+                            <div class="card-content">
+
+                                <div class="name-profession">
+                                    <img src="./images/avatar04.png" alt="">
+                                    <span class="name">王小明</span>
+                                </div>
+
+                                <div class="profession">
+                                    <p>煎餃完全是我的菜，外酥內嫩，太好吃了！每次來這家店必點煎餃，外皮煎得金黃酥脆，太香了！</p>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!----------------- 第五張 ----------------->
+                        <div class="swiper-slide card">
+
+
+                            <div class="card-content">
+
+                                <div class="name-profession">
+                                    <img src="./images/avatar05.png" alt="">
+                                    <span class="name">王小明</span>
+                                </div>
+
+                                <div class="profession">
+                                    <p>煎餃完全是我的菜，外酥內嫩，太好吃了！每次來這家店必點煎餃，外皮煎得金黃酥脆，太香了！</p>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!----------------- 第六張 ----------------->
+                        <div class="swiper-slide card">
+
+
+                            <div class="card-content">
+
+                                <div class="name-profession">
+                                    <img src="./images/avatar06.png" alt="">
+                                    <span class="name">王小明</span>
+                                </div>
+
+                                <div class="profession">
+                                    <p>煎餃完全是我的菜，外酥內嫩，太好吃了！每次來這家店必點煎餃，外皮煎得金黃酥脆，太香了！</p>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!----------------- 第七張 ----------------->
+                        <div class="swiper-slide card">
+
+
+                            <div class="card-content">
+
+                                <div class="name-profession">
+                                    <img src="./images/avatar06.png" alt="">
+                                    <span class="name">王小明</span>
+                                </div>
+
+                                <div class="profession">
+                                    <p>煎餃完全是我的菜，外酥內嫩，太好吃了！每次來這家店必點煎餃，外皮煎得金黃酥脆，太香了！</p>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!----------------- 第八張 ----------------->
+                        <div class="swiper-slide card">
+
+
+                            <div class="card-content">
+
+                                <div class="name-profession">
+                                    <img src="./images/avatar06.png" alt="">
+                                    <span class="name">王小明</span>
+                                </div>
+
+                                <div class="profession">
+                                    <p>煎餃完全是我的菜，外酥內嫩，太好吃了！每次來這家店必點煎餃，外皮煎得金黃酥脆，太香了！</p>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!----------------- 第九張 ----------------->
+                        <div class="swiper-slide card">
+
+
+                            <div class="card-content">
+
+                                <div class="name-profession">
+                                    <img src="./images/avatar06.png" alt="">
+                                    <span class="name">王小明</span>
+                                </div>
+
+                                <div class="profession">
+                                    <p>煎餃完全是我的菜，外酥內嫩，太好吃了！每次來這家店必點煎餃，外皮煎得金黃酥脆，太香了！</p>
+                                </div>
+
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination" color="red"></div>
+            </div>
+
+        </section>
+
+        <!-- 優待區 -->
+        <section id="SPECIAL">
+            <div class="special-left">
+                <h2>平日就是要聚餐</h2>
+                <h3>週一～週四 3人以上聚餐享9折</h3>
+                <p>凡是散策會員預約週一至週四時段，並且3人以上團體用餐，享整單打9折優惠（不包含服務費用）</p>
+                <img src="./images/special02.JPG" alt="">
+            </div>
+
+            <div class="special-right">
+                <img src="./images/special01.JPG" alt="">
+                <h2>週三女子會優待</h2>
+                <h3>週三女性酒精飲品優待價</h3>
+                <p>凡是散策會員預約週一至週四時段，並且3人以上團體用餐，享整單打9折優惠（不包含服務費用）</p>
+            </div>
+        </section>
+
+
+        <!-- 職人專欄 -->
+        <section id="CHEF">
+            <header id="title">
+                <h2>職人專欄</h2>
+            </header>
+            <figure class="banner"><img src="./images/banner.png" alt=""></figure>
+
+            <div class="introduce"><span>你吃下的每一口美味
+                    都來自他的手！</span></div>
+
+            <div class="cards">
+                <article class="card card--1">
+                    <div class="card__info-hover">
+
+                        <div class="card__clock-info">
+                            <span class="card__time">年資17年</span>
+                            <span class="card__time">5燈獎</span>
+                        </div>
+
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="#" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">神戶三宮店</span>
+                        <h3 class="card__title">佐藤 阿健</h3>
+
+                    </div>
+                </article>
+
+
+                <article class="card card--2">
+                    <div class="card__info-hover">
+
+                        <div class="card__clock-info">
+                            <span class="card__time">年資22年</span>
+                            <span class="card__time">5燈獎</span>
+                        </div>
+
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="#" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">台灣101店</span>
+                        <h3 class="card__title">田中 圭仁</h3>
+
+                    </div>
+                </article>
+
+
+                <article class="card card--3">
+                    <div class="card__info-hover">
+
+                        <div class="card__clock-info">
+                            <span class="card__time">年資7年</span>
+                            <span class="card__time">5燈獎</span>
+                        </div>
+
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="#" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">台北中山店</span>
+                        <h3 class="card__title">松山 洸平</h3>
+
+                    </div>
+                </article>
+
+
+
+                <article class="card card--4">
+                    <div class="card__info-hover">
+
+                        <div class="card__clock-info">
+                            <span class="card__time">年資10年</span>
+                            <span class="card__time">5燈獎</span>
+                        </div>
+
+                    </div>
+                    <div class="card__img"></div>
+                    <a href="#" class="card_link">
+                        <div class="card__img--hover"></div>
+                    </a>
+                    <div class="card__info">
+                        <span class="card__category">高雄漢神店</span>
+                        <h3 class="card__title">阿部 寬寬</h3>
+
+                    </div>
+                </article>
+
+            </div>
+
+            <a class="chefBtn" href="#">更多職人專欄<i class="fa-solid fa-arrow-right-long"></i></a>
+
+
+
+        </section>
+
+
+    </main>
+
+    <!-- 頁尾 -->
+    <footer>
+        <a href="#">
+            <h1 class="logo">
+                <img src="./images/logo.svg" alt="">
+            </h1>
+        </a>
+        <div>
+            <div class="navigation">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">找據點</a></li>
+                        <li><a href="#">關於散策</a></li>
+                        <li><a href="#">菜單</a></li>
+                        <li><a href="#">職人專欄</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="./images/icon-ig.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/icon-fb.svg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <small>copyright &copy; 2025 FANG YUTING .</small>
+        </div>
+    </footer>
+
+    <!-- jQuery原生碼 CDN 一定要放在最上面，讓瀏覽器先讀jQuery,才抓得到定義的函式庫 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- jq套件：smoove動態效果 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+
+
+    <script src="./app.js"></script>
+
+
+
+</body>
+
 </html>

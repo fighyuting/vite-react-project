@@ -1,0 +1,178 @@
+@import url(https://fonts.googleapis.com/css2?family=Hina+Mincho&family=LXGW+WenKai+TC&family=Yuji+Boku&display=swap);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+	font-size: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-optical-sizing: auto; /* 光學尺寸 */
+    line-height: 1.5;
+    color: #563729;
+}
+/* 重置標題字重 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+/* 重置清單符號 */
+ol, ul {
+	list-style: none;
+}
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+}
+/* 重置連接 */
+a {
+    display: block; /* 將a預設inline改為block，才能設定間距及寬高 */
+    color: #563729;
+    text-decoration: none;
+}
+/* reset end */
+
+/* main{
+    background-image: url(/images/bg/bg-about.png);
+    background-size: cover;
+} */
+
+
+
+/* topbar */
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo p {
+    margin: 0 10px;
+    font-family: "Hina Mincho", serif;
+}
+#topbar img {
+    width: 40px;
+}
+
+#topbar li {
+    padding: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.menu {
+    margin: 0 20px;
+}
+
+.menu li {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    transition: all .3s linear;
+}
+
+.menu li:hover {
+    color: #fff;
+    background-color: #E43F00;
+}
+
+.icon ul {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 頁尾 */
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+
+    background-color: #F4EAE2;
+    border-width:3px;
+    border-top-style:solid;
+    border-color:#C69D66;
+}
+
+footer img {
+    width: 40px;
+}
+.logo img {
+    width:100px;
+}
+footer li {
+    padding: 10px;
+}
+
+footer .navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+}
+
+footer .menu {
+    margin: 0 20px;
+}
+
+footer .menu li {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    transition: all .3s linear;
+}
+
+footer .menu li:hover {
+    color: #fff;
+    background-color: #E43F00;
+}
+
+footer .icon ul {
+    display: flex;
+    justify-content: center;
+}
+
+small {
+    display: flex;
+    justify-content: flex-end;
+}

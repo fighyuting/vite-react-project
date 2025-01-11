@@ -1,0 +1,1460 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&family=LXGW+WenKai+Mono+TC&family=Noto+Sans+TC:wght@100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap'); */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-optical-sizing: auto;
+    /* 光學尺寸 */
+    line-height: 1.5;
+    color: #563729;
+    font-family: "Noto Sans TC", serif;
+}
+
+/* 重置標題字重 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* 重置清單符號 */
+ol,
+ul {
+    list-style: none;
+}
+
+/* 重置圖片 */
+/* img {
+    display: block;
+    width: 100%;
+} */
+/* 重置連接 */
+a {
+    display: block;
+    /* 將a預設inline改為block，才能設定間距及寬高 */
+    color: #563729;
+    text-decoration: none;
+}
+
+/* reset end */
+
+.my-popup {
+    z-index: 9999;
+    /* 其他自定義樣式 */
+}
+
+
+/* topbar */
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo p {
+    margin: 0 10px;
+    font-family: "Hina Mincho", serif;
+}
+
+#topbar a img {
+    width: 40px;
+}
+
+#topbar li {
+    padding: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.line {
+    display: inline-block;
+    margin: 10px;
+    width: 1px;
+    height: 2rem;
+    background-color: #563729;
+}
+
+
+/* 跑馬燈 */
+
+.marquee {
+    /* min-height: 100px; */
+    width: 360px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.marquee div {
+    width: 100%;
+    display: inline-block;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    white-space: nowrap;
+    animation: 8s linear 0s infinite normal none running marquee;
+}
+
+.marquee .span2 {
+    color: #563729;
+}
+
+.marquee span {
+    font-size: 1rem;
+    color: #E43F00;
+    font-weight: 500;
+}
+
+.marquee ul {
+    display: flex;
+    justify-content: center;
+}
+
+.logo li img {
+    width: 1rem;
+    margin-right: 2px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+.menu {
+    margin: 0 20px;
+}
+
+.menu li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.2rem;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    transition: all .3s linear;
+}
+
+.menu li:hover {
+    background-color: #E43F00;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+.icon ul {
+    display: flex;
+    justify-content: center;
+}
+
+.icon img {
+    color: #FFF;
+}
+
+.icon img {
+    color: #E43F00;
+}
+
+/* 內容 */
+/* -----------------------------封面區 */
+#cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/newWeb/images/bg/bg-1.png');
+    background-size: cover;
+    background-color: #333;
+
+    height: 88vh;
+}
+
+#cover img {
+    width: 60%;
+}
+
+.title-img {
+    position: absolute;
+    width: 82%;
+    top: 71%;
+    left: 28%;
+    z-index: 99;
+}
+
+.planet {
+    width: 102%;
+    position: absolute;
+    top: 240;
+    left: 381px;
+}
+
+.foods {
+    position: absolute;
+    width: 82%;
+    top: -1%;
+    left: 29%;
+    z-index: 1;
+}
+
+#cover {
+    position: relative;
+}
+
+.animation figure {
+    position: absolute;
+}
+
+.animation .brand1 {
+    width: 10%;
+    animation: brand1 8s infinite both;
+}
+
+.animation .brand2 {
+    width: 10%;
+    animation: brand2 8s 0.25s infinite both;
+}
+
+.animation .brand3 {
+    width: 10%;
+    animation: brand3 8s 0.5s infinite both;
+}
+
+@keyframes brand1 {
+    0% {
+        left: 33%;
+        top: 36vh;
+    }
+
+    /* 0s 開始滑入 */
+    40% {
+        left: 33%;
+        
+        top: 8vh;
+    }
+
+    /* 1.2s停留畫面中顯示 */
+    50% {
+        left: 33%;
+        top: 8vh;
+    }
+
+    /* 2.4s開始滑出 */
+    75% {
+        left: 33%;
+        top: 34vh;
+    }
+
+    /* 3.6s停留是窗外隱藏 */
+    100% {
+        left: 38%;
+        top: 34vh;
+    }
+
+    /* 12s停留 */
+}
+
+@keyframes brand2 {
+    0% {
+        left: 38%;
+        top: 50vh;
+    }
+
+    /* 0s 開始滑入 */
+    40% {
+        left: 38%;
+        ;
+        top: 10vh;
+    }
+
+    /* 1.2s停留畫面中顯示 */
+    50% {
+        left: 38%;
+        top: 10vh;
+    }
+
+    /* 2.4s開始滑出 */
+    75% {
+        left: 38%;
+        top: 40vh;
+    }
+
+    /* 3.6s停留是窗外隱藏 */
+    100% {
+        left: 38%;
+        top: 40vh;
+    }
+
+    /* 12s停留 */
+}
+
+@keyframes brand3 {
+    0% {
+        left: 43%;
+        top: 50vh;
+    }
+
+    /* 0s 開始滑入 */
+    40% {
+        left: 43%;
+        ;
+        top: 13vh;
+    }
+
+    /* 1.2s停留畫面中顯示 */
+    50% {
+        left: 43%;
+        top: 13vh;
+    }
+
+    /* 2.4s開始滑出 */
+    75% {
+        left: 43%;
+        top: 50vh;
+    }
+
+    /* 3.6s停留是窗外隱藏 */
+    100% {
+        left: 43%;
+        top: 50vh;
+    }
+
+    /* 12s停留 */
+}
+
+
+
+
+/* 訂位列 */
+
+.bookimg-box {
+    background-color: #E43F00;
+    width: 388px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+
+    color: #FFF;
+    position: absolute;
+
+    top: 22%;
+    right: 32px;
+    z-index: 999;
+}
+
+input,
+select {
+    height: 60px;
+    width: 160px;
+    padding: 20px 8px;
+    margin: 8px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font: 14px "Noto Sans TC", serif;
+    outline: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    padding: 0 10px;
+}
+
+.item-booking {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-booking {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-top {
+    display: flex;
+}
+
+.booking-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    width: 340px;
+}
+
+button:hover {
+    background-color: #C69D66;
+}
+
+.button1 {
+    border: none;
+    background-color: #F0C779;
+    color: #FFF;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 12px 0;
+    width: 340px;
+    cursor: pointer;
+    margin: 8px 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------各標題----------- */
+#title {
+    margin-top: 64px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+#title h2 {
+    font-size: 3rem;
+    font-family: "Hina Mincho", serif;
+}
+
+#title h3 {
+    font-size: 3rem;
+    font-family: "Hina Mincho", serif;
+    margin-left: 100px;
+}
+
+#title p {
+    font-size: 1rem;
+    margin: 16px 240px;
+}
+
+/* banner */
+.banner {
+    position: relative;
+    top: -130px;
+}
+
+.banner-pop {
+    position: relative;
+    top: -130px;
+}
+
+.banner-new {
+    position: relative;
+    width: 36%;
+    top: 7px;
+    left: 40%;
+    z-index: 1;
+}
+
+/* -----------新年慶----------- */
+#NEW {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100%;
+    background-image: url('/newWeb/images/bg/bg-3.png');
+    background-size: cover;
+
+}
+
+#NEW #title {
+    z-index: 99;
+    position: absolute;
+    top: 98%;
+    left: 49.5%;
+}
+
+.dum {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.new-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#NEW .ron1 {
+    position: absolute;
+    top: 99%;
+    left: 33%;
+}
+
+.ron2 {
+    position: absolute;
+    top: 99%;
+    right: 27%;
+}
+
+.slogan-date {
+    position: absolute;
+    top: 154%;
+    left: 19%;
+
+    color: #E43F00;
+    -webkit-text-stroke: 3px #563729;
+    font-size: 20rem;
+    font-family: "Hina Mincho", serif;
+}
+
+/* 左邊煎餃 */
+.slogan-left h3 {
+    font-size: 4rem;
+    font-family: "Hina Mincho", serif;
+}
+
+.slogan-left h2 {
+    margin-left: 10rem;
+    font-size: 4rem;
+    font-family: "Hina Mincho", serif;
+}
+
+.slogan-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+/* 中間台灣 */
+.slogan-center {
+    color: #FDD904;
+    -webkit-text-stroke: 3px #563729;
+    font-weight: 700;
+    font-size: 14rem;
+    font-family: "LXGW WenKai Mono TC", serif;
+    line-height: 240px;
+
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-lr;
+
+
+    margin-bottom: 64px;
+}
+
+
+
+/* 右邊蜜桃 */
+.slogan-right h3 {
+    writing-mode: vertical-lr;
+}
+
+.slogan-right h2 {
+    color: #F484A0;
+    font-size: 4rem;
+    font-family: "Hina Mincho", serif;
+    writing-mode: vertical-lr;
+}
+
+.slogan-right {
+    display: flex;
+}
+
+.slogan-rightright {
+    position: absolute;
+    right: 5%;
+    top: 103%;
+    display: flex
+}
+
+.slogan-rightright h3 {
+    margin-top: 200px;
+    font-size: 2rem;
+}
+
+.pinkbb {
+    position: absolute;
+    top: 111%;
+    right: 8%;
+}
+
+/* -----------招牌料理介紹----------- */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* background-color: #FFF; */
+    background-image: url('/newWeb/images/bg/bg-2.png');
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* .slider::before {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: #E43F00;
+} */
+
+.title-slider h2 {
+    position: absolute;
+    top: 10%;
+    right: 60%;
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+    width: 32%;
+    height: 8%;
+    font-family: "Hina Mincho", serif;
+    background-color: #FDD904;
+    color: #563729;
+    line-height: .9em;
+    transform: rotate(-5deg);
+}
+
+
+.title-slider p {
+    position: absolute;
+    font-size: 1rem;
+    transform: rotate(-5deg);
+    top: 18%;
+    right: 60%;
+    color: #fff;
+}
+
+.images {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    --rotate: 0deg;
+    transform: translate(-50%, 50%) rotate(var(--rotate));
+    width: 1300px;
+    height: 1300px;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+    outline: 3px dashed #fff5;
+    outline-offset: -100px;
+}
+
+.images .item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    rotate: calc(60deg * var(--i));
+}
+
+.images .item img {
+    height: 420px;
+}
+
+.content {
+    color: #563729;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    text-align: justify;
+    width: 350px;
+}
+
+.content h1 {
+    color: #E43F00;
+    font-size: 3rem;
+    font-family: "Hina Mincho", serif;
+    line-height: 100px;
+}
+
+.content .item {
+    display: none;
+}
+
+.content .item.active {
+    display: block;
+}
+
+@keyframes showContent {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.content .item.active h1 {
+    opacity: 0;
+    animation: showContent 0.5s ease-in-out 1 forwards;
+}
+
+.content .item.active .des {
+    opacity: 0;
+    animation: showContent 0.5s 0.3s ease-in-out 1 forwards;
+}
+
+.content .item.active button {
+    opacity: 0;
+    animation: showContent 0.5s 0.6s ease-in-out 1 forwards;
+}
+
+
+#prev,
+#next {
+    position: absolute;
+    border: none;
+    top: 50%;
+    left: 250px;
+    font-size: 100px;
+    font-family: cursive;
+    background-color: transparent;
+    color: #FDD904;
+    font-weight: bold;
+    opacity: 0.3
+}
+
+#next {
+    left: unset;
+    right: 250px;
+}
+
+#next:hover,
+#prev:hover {
+    opacity: 1
+}
+
+
+
+/* ----------人氣評論---------- */
+#POP {
+    background-image: url('/newWeb/images/bg/bg-pop.png');
+    background-size: cover;
+
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    height: 100vh;
+}
+
+.card-pop {
+    margin-top: 183px;
+    height: 200px;
+}
+
+
+.swiper {
+    width: 800px;
+    top: 80px;
+}
+
+
+#POP .card img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 3px;
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+
+}
+
+.card {
+    position: relative;
+    background-color: #F4EAE2;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.big-card {
+    position: absolute;
+    left: 549px;
+    top: 272px;
+    background-color: #FFF;
+    border-radius: 10px;
+    width: 800px;
+    height: 304px;
+    padding: 32px;
+    margin-bottom: 100px;
+}
+
+/* .card::before {
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+
+} */
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+}
+.big-card .name-profession{
+    margin: 0 0 16px 40px;
+}
+
+
+.name-profession {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #333;
+    display: flex;
+}
+
+.name-profession .name {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.name-profession .profession {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.profession {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.profession img {
+    width: 30%;
+}
+
+.big-card .profession p {
+    width: 400px;
+}
+
+/* 星星 */
+.card .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.card .rating i {
+    font-size: 18px;
+    margin: 0 2px;
+    color: red;
+}
+
+.card-content .rating i {
+    font-size: 18px;
+    margin: 0 2px;
+    color: red;
+}
+
+.rating {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 箭頭 */
+.swiper-pagination-bullet {
+    height: 7px;
+    width: 26px;
+    border-radius: 25px;
+    background: red;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    opacity: 0.7;
+    color: #E43F00;
+    transition: all 0.3s ease;
+    margin: 0 200px;
+    position: relative;
+    top: var(--swiper-navigation-top-offset, 80%);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    opacity: 1;
+    color: #FDD904;
+
+}
+
+.swiper-pagination {
+    color: #E43F00 !important;
+}
+
+:root {
+    --swiper-navigation-color: #E43F00;
+    --swiper-theme-color: #E43F00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------優待區----------- */
+#SPECIAL {
+    display: flex;
+    background-image: url('/newWeb/images/bg/bg-3.png');
+    background-size: cover;
+    justify-content: space-evenly;
+    padding: 48px;
+    height: 100vh;
+}
+
+#SPECIAL img {
+    width: 500px;
+    margin: 8px;
+}
+
+#SPECIAL h2 {
+    font-size: 3rem;
+    border: #C69D66 solid 1px;
+    width: 344px;
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+}
+
+#SPECIAL h3 {
+    font-size: 2rem;
+    background-color: #E43F00;
+    width: 446px;
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+}
+
+#SPECIAL p {
+    font-size: 1.2rem;
+    width: 420px;
+    margin: 8px;
+}
+
+.special-left {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.special-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+/* ---------------職人專欄--------------- */
+#CHEF {
+    background-image: url('/newWeb/images/bg/bg-6.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.introduce {
+    margin-bottom: 16px;
+}
+
+
+
+
+
+
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    max-width: 820px;
+    margin: 20px;
+}
+
+.card--1 .card__img,
+.card--1 .card__img--hover {
+    background-image: url('/newWeb/images/chef01.png');
+}
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+    background-image: url('/newWeb/images/chef02.png');
+}
+
+.card--3 .card__img,
+.card--3 .card__img--hover {
+    background-image: url('/newWeb/images/chef03.png');
+}
+
+.card--4 .card__img,
+.card--4 .card__img--hover {
+    background-image: url('/newWeb/images/chef04.png');
+}
+
+.card__like {
+    width: 18px;
+}
+
+.card__clock {
+    width: 15px;
+    vertical-align: middle;
+    fill: #AD7D52;
+}
+
+.card__time {
+    font-size: 12px;
+    color: #AD7D52;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.card__clock-info {
+    float: right;
+}
+
+.card__img {
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+}
+
+.card__info-hover {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+}
+
+.card__img--hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    top: 0;
+
+}
+
+.card {
+    margin-right: 25px;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    background-color: #fff;
+    width: 33.3%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+
+}
+
+.card:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.10, 1.10);
+}
+
+.card__info {
+    z-index: 2;
+    background-color: #fff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 24px 24px 24px;
+
+}
+
+
+
+
+.card__category {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #868686;
+    font-family: "Noto Sans TC", serif;
+    font-weight: 600;
+}
+
+.card__title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: "Noto Sans TC", serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.card__by {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.card__author {
+    font-weight: 600;
+    text-decoration: none;
+    color: #AD7D52;
+}
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}
+
+.chefBtn {
+    color: #FFF;
+    border: 1px solid #FFF;
+    padding: 8px;
+    margin-left: 40%;
+    height: 40px;
+}
+
+.chefBtn:hover {
+    color: #563729;
+    background-color: #FDD904;
+    border: 1px solid #FDD904;
+}
+
+
+.card__time {
+    font-family: "Noto Sans TC", serif;
+    font-weight: 600;
+}
+
+
+.fa-arrow-right-long {
+    margin-left: 8px;
+}
+
+
+
+
+
+
+/* 頁尾 */
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+
+    background-color: #F4EAE2;
+    border-width: 3px;
+    border-top-style: solid;
+    border-color: #C69D66;
+}
+
+footer img {
+    width: 40px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+footer li {
+    padding: 10px;
+}
+
+footer .navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+}
+
+footer .menu {
+    margin: 0 20px;
+}
+
+footer .menu li {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    transition: all .3s linear;
+}
+
+footer .menu li:hover {
+    color: #fff;
+    background-color: #E43F00;
+}
+
+footer .icon ul {
+    display: flex;
+    justify-content: center;
+}
+
+small {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 封面的煙霧 */
+.smoke {
+    width: 70px;
+    height: 100px;
+    background: none;
+    position: absolute;
+    right: 36rem;
+    margin-left: -40px;
+    z-index: 99;
+    top: 12.8rem;
+    animation: bk 11s infinite;
+}
+
+.smoke:after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: none;
+    position: absolute;
+    background-image: -webkit-radial-gradient(42% 48%, ellipse, rgba(255, 255, 255, 0.2), transparent 25%), -webkit-radial-gradient(35% 70%, ellipse, rgba(255, 255, 255, 0.2), transparent 15%), -webkit-radial-gradient(42% 61%, ellipse, rgba(255, 255, 255, 0.2), transparent 10%), -webkit-radial-gradient(80% 80%, ellipse, rgba(255, 255, 255, 0.2), transparent 20%);
+
+    animation: smoke 2s 1s infinite;
+    transform: rotate(18deg);
+}
+
+
+@keyframes smoke {
+    0% {
+        background-position: 0 0;
+        opacity: 0;
+    }
+
+    15%,
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        background-position: -20px -25px, -5px -25px, 0px -25px, 0px -25px;
+        opacity: 0;
+    }
+}
+
+
+.smoke2 {
+    width: 70px;
+    height: 100px;
+    background: none;
+    position: absolute;
+    left: 58rem;
+    margin-left: -40px;
+    z-index: 99;
+    top: 12.8rem;
+    animation: bk 11s infinite;
+}
+
+.smoke2:after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: none;
+    position: absolute;
+    background-image: -webkit-radial-gradient(42% 48%, ellipse, rgba(255, 255, 255, 0.2), transparent 25%), -webkit-radial-gradient(35% 70%, ellipse, rgba(255, 255, 255, 0.2), transparent 15%), -webkit-radial-gradient(42% 61%, ellipse, rgba(255, 255, 255, 0.2), transparent 10%), -webkit-radial-gradient(80% 80%, ellipse, rgba(255, 255, 255, 0.2), transparent 20%);
+
+    animation: smoke 2s 1s infinite;
+    transform: rotate(18deg);
+}
+
+
+@keyframes smoke2 {
+    0% {
+        background-position: 0 0;
+        opacity: 0;
+    }
+
+    15%,
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        background-position: -20px -25px, -5px -25px, 0px -25px, 0px -25px;
+        opacity: 0;
+    }
+}
